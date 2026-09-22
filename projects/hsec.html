@@ -1,11 +1,613 @@
 <!DOCTYPE html>
 <html lang="pt">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>HSEC Management | Jaime Zandamela</title><link rel="stylesheet" href="../style.css"><style>
-.project-page{padding:80px 0}.project-page .lead{font-size:1.25rem;color:var(--muted);max-width:750px}.project-hero{margin:35px 0 55px;min-height:360px}.project-page h2{font-size:2rem;margin-top:55px}.project-page li{margin:8px 0;color:var(--muted)}.screens{display:grid;grid-template-columns:1fr 1fr;gap:16px}.screens>div{aspect-ratio:16/9;display:grid;place-items:center}.note{padding:18px;border:1px dashed var(--line);border-radius:10px}@media(max-width:700px){.screens{grid-template-columns:1fr}}
-</style></head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>HSEC Management | Jaime Zandamela</title>
+
+  <link rel="stylesheet" href="../style.css">
+
+  <style>
+    .project-page {
+      padding: 80px 0;
+    }
+
+    .project-page .lead {
+      font-size: 1.25rem;
+      color: var(--muted);
+      max-width: 820px;
+      line-height: 1.7;
+    }
+
+    .project-hero {
+      margin: 35px 0 55px;
+      min-height: 360px;
+    }
+
+    .project-hero img {
+      width: 100%;
+      display: block;
+      border-radius: 14px;
+    }
+
+    .project-page h2 {
+      font-size: 2rem;
+      margin-top: 60px;
+      margin-bottom: 20px;
+    }
+
+    .project-page h3 {
+      font-size: 1.25rem;
+      margin-top: 30px;
+      margin-bottom: 12px;
+    }
+
+    .project-page p {
+      line-height: 1.8;
+    }
+
+    .project-page li {
+      margin: 10px 0;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .project-page li strong {
+      color: var(--text);
+    }
+
+    .screens {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
+    .screens figure {
+      margin: 0;
+    }
+
+    .screens img {
+      width: 100%;
+      display: block;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+    }
+
+    .screens figcaption {
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .note {
+      padding: 20px;
+      border: 1px dashed var(--line);
+      border-radius: 12px;
+      margin-top: 25px;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+      margin-top: 25px;
+    }
+
+    .feature-card {
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: var(--surface);
+    }
+
+    .feature-card h3 {
+      margin-top: 0;
+      font-size: 1.1rem;
+    }
+
+    .feature-card p {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 0;
+    }
+
+    .architecture {
+      padding: 25px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      margin-top: 25px;
+    }
+
+    .architecture code {
+      font-family: monospace;
+      line-height: 2;
+      color: var(--muted);
+      white-space: pre-wrap;
+    }
+
+    .tech {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .tech span {
+      padding: 8px 13px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      font-size: 0.9rem;
+    }
+
+    .project-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .project-meta span {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 700px) {
+      .screens,
+      .feature-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .project-page {
+        padding: 50px 0;
+      }
+    }
+  </style>
+</head>
+
 <body>
-<header class="site-header"><div class="container nav"><a class="brand" href="../index.html">JLZ<span>.</span></a><a class="button secondary" href="../index.html#projectos">← Projectos</a></div></header>
-<main class="project-page"><div class="container narrow"><p class="eyebrow">PROJECTO INDEPENDENTE · 2022 — PRESENTE</p><h1>HSEC Management</h1><p class="lead">Sistema Web para gestão HSE e Compliance.</p><figure class="project-hero"><img src="../assets/img/hsc-01.png" alt="HSEC Management — screenshot principal"></figure><h2>Sobre o projecto</h2><p>Plataforma orientada para centralizar documentação, trabalhadores, formação, riscos, incidentes, auditorias, equipamentos, contratos, notificações e relatórios.</p><h2>O meu trabalho</h2><ul><li>Análise de requisitos.</li><li>Desenvolvimento de APIs REST.</li><li>Implementação de funcionalidades e regras de negócio.</li><li>Arquitectura multi-tenant e isolamento de dados.</li><li>Frontend React/TypeScript.</li><li>Testes, documentação e manutenção evolutiva.</li></ul><h2>Galeria do projecto</h2><div class="screens"><figure><img src="../assets/img/hsc-02.png" alt="HSEC Management — ecrã 01" loading="lazy"><figcaption>HSEC Management — ecrã 01</figcaption></figure><figure><img src="../assets/img/hsec-empresas.png" alt="HSEC Management — ecrã 02" loading="lazy"><figcaption>HSEC Management — ecrã 02</figcaption></figure><figure><img src="../assets/img/hsec-empresa-01.png" alt="HSEC Management — ecrã 03" loading="lazy"><figcaption>HSEC Management — ecrã 03</figcaption></figure><figure><img src="../assets/img/hsec-reports.png" alt="HSEC Management — ecrã 04" loading="lazy"><figcaption>HSEC Management — ecrã 04</figcaption></figure></div><h2>Tecnologias</h2><div class="tech"><span>C#</span><span>.NET 8</span><span>ASP.NET Core</span><span>SQL Server</span><span>React</span><span>TypeScript</span><span>REST</span></div></div></main>
-<footer><div class="container"><span>© <span id="year"></span> Jaime de Leite Zandamela</span><span>Maputo, Moçambique</span></div></footer>
-<script>document.querySelector("#year").textContent=new Date().getFullYear();</script>
-</body></html>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="../index.html">
+        JLZ<span>.</span>
+      </a>
+
+      <a class="button secondary" href="../index.html#projectos">
+        ← Projectos
+      </a>
+    </div>
+  </header>
+
+  <main class="project-page">
+    <div class="container narrow">
+
+      <p class="eyebrow">
+        PROJECTO INDEPENDENTE · 2025 — PRESENTE
+      </p>
+
+      <h1>HSEC Management</h1>
+
+      <p class="lead">
+        Plataforma Web multi-tenant para gestão de Health, Safety,
+        Environment & Compliance, concebida para centralizar processos,
+        documentação e indicadores relacionados com Saúde, Segurança,
+        Ambiente e Conformidade.
+      </p>
+
+      <div class="project-meta">
+        <span>● Projecto independente</span>
+        <span>● Desenvolvimento full-stack</span>
+        <span>● Desenvolvedor único</span>
+        <span>● Em desenvolvimento contínuo</span>
+      </div>
+
+      <figure class="project-hero">
+        <img
+          src="../assets/img/hsc-01.png"
+          alt="HSEC Management — visão geral da plataforma"
+        >
+      </figure>
+
+      <h2>Sobre o projecto</h2>
+
+      <p>
+        O <strong>HSEC Management</strong> é um sistema Web desenvolvido
+        para apoiar organizações na gestão integrada de Saúde, Segurança,
+        Ambiente e Conformidade.
+      </p>
+
+      <p>
+        A solução foi concebida para substituir processos manuais,
+        documentos dispersos e mecanismos pouco centralizados por uma
+        plataforma digital com controlo de acesso, rastreabilidade,
+        organização documental e acompanhamento de indicadores.
+      </p>
+
+      <p>
+        O sistema segue uma abordagem multi-tenant, permitindo que
+        diferentes organizações utilizem a mesma aplicação com separação
+        lógica dos seus dados.
+      </p>
+
+      <h2>Objectivos principais</h2>
+
+      <ul>
+        <li>Centralizar a documentação obrigatória e corporativa.</li>
+        <li>Facilitar o acompanhamento de validade e estado dos documentos.</li>
+        <li>Organizar informação de colaboradores, formação e certificações.</li>
+        <li>Apoiar a gestão de riscos, incidentes e auditorias.</li>
+        <li>Melhorar a rastreabilidade das operações e alterações.</li>
+        <li>Disponibilizar indicadores e relatórios de conformidade.</li>
+        <li>Reduzir a dependência de processos manuais e dispersos.</li>
+      </ul>
+
+      <h2>Módulos e áreas funcionais</h2>
+
+      <div class="feature-grid">
+
+        <div class="feature-card">
+          <h3>Organizações e Sites</h3>
+          <p>
+            Gestão de empresas, organizações, sites e respectivas
+            estruturas operacionais.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <h3>Documentação</h3>
+          <p>
+            Gestão de tipos de documentos, etiquetas, versões, upload,
+            aprovação, arquivo, retenção e estados de validade.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <h3>Pessoas e Colaboradores</h3>
+          <p>
+            Registo de pessoas, vínculos, competências e informação
+            relacionada com colaboradores.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <h3>Formação e Certificações</h3>
+          <p>
+            Organização de cursos, inscrições, certificados e informação
+            associada à qualificação dos colaboradores.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <h3>Riscos e Auditorias</h3>
+          <p>
+            Estrutura preparada para registo de perigos, avaliações de
+            risco, auditorias e respectivos itens de verificação.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <h3>Incidentes e Acções Correctivas</h3>
+          <p>
+            Registo de incidentes, causas, medidas correctivas e evidências
+            relacionadas.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <h3>Activos e Equipamentos de Protecção</h3>
+          <p>
+            Gestão de activos, atribuições e inspecções de equipamentos,
+            incluindo EPIs.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <h3>Contratos e Acordos</h3>
+          <p>
+            Organização de contratos, acordos e informação relativa às
+            partes envolvidas.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <h3>Notificações e Alertas</h3>
+          <p>
+            Estrutura para alertas operacionais, notificações e
+            acompanhamento de expiração de documentos.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <h3>Relatórios e Indicadores</h3>
+          <p>
+            Apresentação de informação de conformidade, documentação e
+            desempenho através de relatórios e indicadores.
+          </p>
+        </div>
+
+      </div>
+
+      <h2>Arquitectura da solução</h2>
+
+      <p>
+        A aplicação foi organizada segundo uma arquitectura em camadas,
+        procurando separar responsabilidades de domínio, aplicação,
+        persistência e exposição de serviços.
+      </p>
+
+      <div class="architecture">
+        <code>
+Domain
+   ↓
+Application
+   ↓
+Infrastructure / Persistence
+   ↓
+API Controllers
+   ↓
+React Frontend
+        </code>
+      </div>
+
+      <h3>Backend e domínio</h3>
+
+      <ul>
+        <li>
+          <strong>Arquitectura em camadas:</strong>
+          separação entre domínio, aplicação, infraestrutura e API.
+        </li>
+
+        <li>
+          <strong>Multi-tenancy por schema:</strong>
+          cada organização utiliza um schema próprio no SQL Server.
+        </li>
+
+        <li>
+          <strong>Catálogo central:</strong>
+          registo e gestão dos tenants através de um contexto central.
+        </li>
+
+        <li>
+          <strong>Persistência por tenant:</strong>
+          utilização de contexto de aplicação com schema dinâmico.
+        </li>
+
+        <li>
+          <strong>Provisionamento de tenants:</strong>
+          criação de estruturas e aplicação de migrations de forma
+          idempotente.
+        </li>
+
+        <li>
+          <strong>Auditoria e integridade:</strong>
+          controlo de criação e actualização de registos, soft-delete,
+          índices e regras de integridade.
+        </li>
+
+        <li>
+          <strong>Autenticação:</strong>
+          autenticação baseada em JWT e refresh tokens.
+        </li>
+
+        <li>
+          <strong>Ficheiros:</strong>
+          suporte ao carregamento e armazenamento de documentos.
+        </li>
+      </ul>
+
+      <h3>Frontend</h3>
+
+      <ul>
+        <li>Aplicação SPA desenvolvida com React e TypeScript.</li>
+        <li>Interface organizada com sidebar e topbar.</li>
+        <li>Dashboard com KPIs, alertas e actividades recentes.</li>
+        <li>Páginas para organizações, documentos, pessoas e formação.</li>
+        <li>Filtros e operações de gestão documental.</li>
+        <li>Integração com a API através de Axios e React Query.</li>
+        <li>Suporte para os idiomas português e inglês.</li>
+        <li>Componentes visuais e gráficos para apresentação de dados.</li>
+      </ul>
+
+      <h2>O meu papel no projecto</h2>
+
+      <p>
+        O HSEC Management foi desenvolvido unicamente por mim, desde a
+        concepção inicial até à implementação das funcionalidades
+        actualmente disponíveis.
+      </p>
+
+      <p>
+        A minha participação abrangeu diferentes fases do ciclo de vida
+        do software:
+      </p>
+
+      <ul>
+        <li>Análise e levantamento de requisitos com o cliente.</li>
+        <li>Concepção geral da solução e dos fluxos funcionais.</li>
+        <li>Definição da arquitectura da aplicação.</li>
+        <li>Modelação do domínio e das entidades de dados.</li>
+        <li>Desenvolvimento da API REST.</li>
+        <li>Implementação da arquitectura multi-tenant.</li>
+        <li>Configuração de migrations e persistência com Entity Framework Core.</li>
+        <li>Implementação de autenticação e controlo de acesso.</li>
+        <li>Desenvolvimento da interface Web em React e TypeScript.</li>
+        <li>Integração entre frontend, backend e base de dados.</li>
+        <li>Testes de endpoints através de Swagger e Postman.</li>
+        <li>Documentação técnica, manutenção e evolução contínua.</li>
+      </ul>
+
+      <h2>Desafios técnicos abordados</h2>
+
+      <ul>
+        <li>
+          Organização de uma arquitectura preparada para crescimento
+          funcional e manutenção evolutiva.
+        </li>
+
+        <li>
+          Implementação de isolamento lógico de dados entre diferentes
+          organizações.
+        </li>
+
+        <li>
+          Gestão de migrations e estruturas de base de dados por tenant.
+        </li>
+
+        <li>
+          Integração entre uma API .NET e uma aplicação React.
+        </li>
+
+        <li>
+          Estruturação de regras de negócio relacionadas com documentação,
+          validade, auditoria e conformidade.
+        </li>
+
+        <li>
+          Organização de uma interface com vários módulos e diferentes
+          níveis de informação.
+        </li>
+      </ul>
+
+      <h2>Galeria do projecto</h2>
+
+      <div class="screens">
+
+        <figure>
+          <img
+            src="../assets/img/hsc-02.png"
+            alt="HSEC Management — dashboard principal"
+            loading="lazy"
+          >
+          <figcaption>
+            Dashboard e visão geral da plataforma
+          </figcaption>
+        </figure>
+
+        <figure>
+          <img
+            src="../assets/img/hsec-empresas.png"
+            alt="HSEC Management — gestão de empresas"
+            loading="lazy"
+          >
+          <figcaption>
+            Gestão de empresas e organizações
+          </figcaption>
+        </figure>
+
+        <figure>
+          <img
+            src="../assets/img/hsec-empresa-01.png"
+            alt="HSEC Management — detalhe de empresa"
+            loading="lazy"
+          >
+          <figcaption>
+            Informação detalhada de uma organização
+          </figcaption>
+        </figure>
+
+        <figure>
+          <img
+            src="../assets/img/hsec-reports.png"
+            alt="HSEC Management — relatórios"
+            loading="lazy"
+          >
+          <figcaption>
+            Relatórios e indicadores de gestão
+          </figcaption>
+        </figure>
+
+      </div>
+
+      <h2>Tecnologias utilizadas</h2>
+
+      <h3>Backend</h3>
+
+      <div class="tech">
+        <span>C#</span>
+        <span>.NET 8</span>
+        <span>ASP.NET Core</span>
+        <span>Entity Framework Core</span>
+        <span>SQL Server</span>
+        <span>JWT</span>
+        <span>AutoMapper</span>
+        <span>FluentValidation</span>
+        <span>MediatR</span>
+        <span>BCrypt</span>
+        <span>Swagger / OpenAPI</span>
+      </div>
+
+      <h3>Frontend</h3>
+
+      <div class="tech">
+        <span>React 19</span>
+        <span>TypeScript</span>
+        <span>Vite</span>
+        <span>Tailwind CSS</span>
+        <span>Radix UI</span>
+        <span>TanStack React Query</span>
+        <span>React Router</span>
+        <span>Axios</span>
+        <span>React Hook Form</span>
+        <span>Zod</span>
+        <span>i18next</span>
+        <span>Recharts</span>
+        <span>Framer Motion</span>
+        <span>Lucide React</span>
+      </div>
+
+      <h3>Ferramentas e práticas</h3>
+
+      <div class="tech">
+        <span>Git</span>
+        <span>GitHub</span>
+        <span>Docker</span>
+        <span>EF Core Migrations</span>
+        <span>Soft-delete</span>
+        <span>Auditoria</span>
+        <span>Arquitectura em camadas</span>
+        <span>Swagger</span>
+        <span>Postman</span>
+      </div>
+
+      <h2>Estado actual</h2>
+
+      <p>
+        O HSEC Management encontra-se em desenvolvimento contínuo.
+        A plataforma possui uma base arquitectural e funcional preparada
+        para receber novos módulos, melhorar os fluxos existentes e
+        evoluir de acordo com as necessidades identificadas.
+      </p>
+
+      <div class="note">
+        <strong>Nota sobre o projecto:</strong>
+        O HSEC Management é apresentado como um projecto independente
+        desenvolvido por Jaime de Leite Zandamela. Algumas funcionalidades
+        encontram-se em evolução e podem depender de futuras fases de
+        implementação, validação e preparação para utilização em produção.
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <span>
+        © <span id="year"></span> Jaime de Leite Zandamela
+      </span>
+
+      <span>
+        Maputo, Moçambique
+      </span>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelector("#year").textContent =
+      new Date().getFullYear();
+  </script>
+
+</body>
+</html>
