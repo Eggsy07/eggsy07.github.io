@@ -798,17 +798,77 @@
 
     </div>
 </main>
+<!-- BANNER DE CONSENTIMENTO -->
 
-<footer>
-    <div class="container">
-        <span>
-            © <span id="year"></span> Jaime de Leite Zandamela
-        </span>
+  <div
+    id="consent-banner"
+    class="consent-banner"
+    role="dialog"
+    aria-labelledby="consent-title"
+    aria-describedby="consent-description"
+    hidden
+  >
 
-        <span>
-            Maputo, Moçambique
-        </span>
+    <div class="consent-content">
+
+      <strong id="consent-title">
+        Privacidade e utilização de analytics
+      </strong>
+
+      <p id="consent-description">
+        Este portefólio utiliza ferramentas de analytics para compreender
+        as visitas e melhorar a experiência de navegação. Pode aceitar ou
+        recusar esta utilização. A sua escolha não afecta o acesso ao website.
+      </p>
+
+      <a href="privacidade.html">
+        Consultar Política de Privacidade
+      </a>
+
+      <div class="consent-actions">
+
+        <button
+          id="consent-accept"
+          class="button primary"
+          type="button"
+        >
+          Aceitar analytics
+        </button>
+
+        <button
+          id="consent-reject"
+          class="button secondary"
+          type="button"
+        >
+          Recusar
+        </button>
+
+      </div>
+
     </div>
+
+  </div>
+<footer>
+
+    <div class="container">
+
+        <span>
+        © <span id="year"></span>
+        Jaime de Leite Zandamela
+        </span>
+
+        <span>
+        <a href="privacidade.html">
+            Política de Privacidade
+        </a>
+        </span>
+
+        <span>
+        Maputo, Moçambique
+        </span>
+
+    </div>
+
 </footer>
 
 <script>
