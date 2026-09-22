@@ -1,23 +1,687 @@
 <!DOCTYPE html>
 <html lang="pt">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>SIGRR — Sistema de Gestão de Reclamações e Revisões de Exames | Jaime Zandamela</title><link rel="stylesheet" href="../style.css"><style>
-.project-page{padding:80px 0}.project-page .lead{font-size:1.25rem;color:var(--muted);max-width:750px}.project-hero{margin:35px 0 55px;min-height:360px}.project-page h2{font-size:2rem;margin-top:55px}.project-page li{margin:8px 0;color:var(--muted)}.screens{display:grid;grid-template-columns:1fr 1fr;gap:16px}.screens>div{aspect-ratio:16/9;display:grid;place-items:center}.note{padding:18px;border:1px dashed var(--line);border-radius:10px}@media(max-width:700px){.screens{grid-template-columns:1fr}}
-</style></head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>
+    SIGRR — Sistema de Gestão de Reclamações e Revisões de Exames |
+    Jaime Zandamela
+  </title>
+
+  <link rel="stylesheet" href="../style.css">
+
+  <style>
+    .project-page {
+      padding: 80px 0;
+    }
+
+    .project-page .lead {
+      font-size: 1.25rem;
+      color: var(--muted);
+      max-width: 820px;
+      line-height: 1.7;
+    }
+
+    .project-hero {
+      margin: 35px 0 55px;
+      min-height: 360px;
+    }
+
+    .project-hero img {
+      width: 100%;
+      display: block;
+      border-radius: 14px;
+    }
+
+    .project-page h2 {
+      font-size: 2rem;
+      margin-top: 60px;
+      margin-bottom: 20px;
+    }
+
+    .project-page h3 {
+      font-size: 1.25rem;
+      margin-top: 30px;
+      margin-bottom: 12px;
+    }
+
+    .project-page p {
+      line-height: 1.8;
+    }
+
+    .project-page li {
+      margin: 10px 0;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .project-page li strong {
+      color: var(--text);
+    }
+
+    .project-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .project-meta span {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .screens {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
+    .screens figure {
+      margin: 0;
+    }
+
+    .screens img {
+      width: 100%;
+      display: block;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+    }
+
+    .screens figcaption {
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+      margin-top: 25px;
+    }
+
+    .feature-card {
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: var(--surface);
+    }
+
+    .feature-card h3 {
+      margin-top: 0;
+      font-size: 1.1rem;
+    }
+
+    .feature-card p {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 0;
+    }
+
+    .architecture {
+      padding: 25px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      margin-top: 25px;
+      overflow-x: auto;
+    }
+
+    .architecture code {
+      font-family: monospace;
+      line-height: 2;
+      color: var(--muted);
+      white-space: pre-wrap;
+    }
+
+    .result-card {
+      padding: 25px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      margin-top: 25px;
+    }
+
+    .result-card strong {
+      font-size: 1.8rem;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .tech {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .tech span {
+      padding: 8px 13px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      font-size: 0.9rem;
+    }
+
+    .note {
+      padding: 20px;
+      border: 1px dashed var(--line);
+      border-radius: 12px;
+      margin-top: 25px;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    @media (max-width: 700px) {
+      .screens,
+      .feature-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .project-page {
+        padding: 50px 0;
+      }
+    }
+  </style>
+</head>
+
 <body>
-<header class="site-header"><div class="container nav"><a class="brand" href="../index.html">JLZ<span>.</span></a><a class="button secondary" href="../index.html#projectos">← Projectos</a></div></header>
-<main class="project-page"><div class="container narrow"><p class="eyebrow">PROJECTO DE MONOGRAFIA</p>
-<h1>SIGRR</h1>
-<p class="lead">Sistema de Gestão de Reclamações e Revisões de Exames.</p>
-<figure class="project-hero"><img src="../assets/img/sigrr-01.png" alt="SIGRR — screenshot principal"></figure>
-<h2>Sobre o projecto</h2>
-<p>Sistema Web concebido para apoiar a gestão digital de reclamações e pedidos de revisão de exames.</p>
-<h2>O meu trabalho</h2>
-<ul><li>Análise e levantamento de requisitos.</li><li>Concepção da solução.</li><li>Desenvolvimento da aplicação.</li><li>Implementação de regras de negócio e operações CRUD.</li><li>Integração com base de dados.</li></ul>
-<h2>Tecnologias</h2>
-<div class="tech"><span>PHP</span><span>Laravel</span><span>MySQL</span><span>JavaScript</span><span>HTML5</span><span>CSS3</span></div>
-<h2>Screenshots</h2>
-<div class="screens"><figure><img src="../assets/img/sigrr-02.png" alt="SIGRR — ecrã 01" loading="lazy"><figcaption>SIGRR — ecrã 01</figcaption></figure><figure><img src="../assets/img/estado-peticoes-sigrr.png" alt="SIGRR — ecrã 02" loading="lazy"><figcaption>SIGRR — ecrã 02</figcaption></figure><figure><img src="../assets/img/sigrr_admin_login.png" alt="SIGRR — ecrã 03" loading="lazy"><figcaption>SIGRR — ecrã 03</figcaption></figure><figure><img src="../assets/img/Rec-Form-sigrr.png" alt="SIGRR — ecrã 04" loading="lazy"><figcaption>SIGRR — ecrã 04</figcaption></figure><figure><img src="../assets/img/rev-form-sigrr.png" alt="SIGRR — ecrã 05" loading="lazy"><figcaption>SIGRR — ecrã 05</figcaption></figure><figure><img src="../assets/img/IA-sigrr.png" alt="SIGRR — ecrã 06" loading="lazy"><figcaption>SIGRR — ecrã 06</figcaption></figure></div>
-<p class="note">[COLOCAR AQUI O LINK DO REPOSITÓRIO, CASO O CÓDIGO POSSA SER PUBLICADO.]</p></div></main>
-<footer><div class="container"><span>© <span id="year"></span> Jaime de Leite Zandamela</span><span>Maputo, Moçambique</span></div></footer>
-<script>document.querySelector("#year").textContent=new Date().getFullYear();</script>
-</body></html>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="../index.html">
+        JLZ<span>.</span>
+      </a>
+
+      <a class="button secondary" href="../index.html#projectos">
+        ← Projectos
+      </a>
+    </div>
+  </header>
+
+  <main class="project-page">
+    <div class="container narrow">
+
+      <p class="eyebrow">
+        PROJECTO DE MONOGRAFIA · 2023 — 2026
+      </p>
+
+      <h1>
+        SIGRR
+      </h1>
+
+      <p class="lead">
+        Sistema de Gestão de Reclamações e Revisões de Exames de Admissão,
+        com integração de funcionalidades de Inteligência Artificial
+        para apoio à classificação, análise e tratamento de pedidos.
+      </p>
+
+      <div class="project-meta">
+        <span>● Projecto académico e de investigação</span>
+        <span>● Universidade Pedagógica de Maputo</span>
+        <span>● Desenvolvimento full-stack</span>
+        <span>● IA aplicada</span>
+      </div>
+
+      <figure class="project-hero">
+        <img
+          src="../assets/img/sigrr-01.png"
+          alt="SIGRR — visão geral do sistema"
+        >
+      </figure>
+
+      <h2>Sobre o projecto</h2>
+
+      <p>
+        O <strong>SIGRR — Sistema de Gestão de Reclamações e Revisões
+        de Exames de Admissão</strong> é uma plataforma Web desenvolvida
+        no âmbito da minha monografia de Licenciatura em Informática,
+        na Universidade Pedagógica de Maputo.
+      </p>
+
+      <p>
+        O sistema foi concebido para apoiar a digitalização e organização
+        do processo de submissão, acompanhamento, análise e tratamento
+        de reclamações e pedidos de revisão de exames de admissão.
+      </p>
+
+      <p>
+        Para além da gestão tradicional dos pedidos, o projecto integra
+        um motor de Inteligência Artificial desenvolvido em Python,
+        destinado a apoiar a classificação de reclamações, análise de
+        sentimento, identificação de padrões e produção de informação
+        analítica para apoio à decisão.
+      </p>
+
+      <h2>Problema abordado</h2>
+
+      <p>
+        O processo convencional de apresentação e tratamento de
+        reclamações e revisões de exames pode envolver procedimentos
+        manuais, circulação de documentos físicos e reduzida
+        rastreabilidade do estado dos pedidos.
+      </p>
+
+      <p>
+        O SIGRR foi concebido como uma alternativa digital para melhorar
+        a organização da informação e facilitar o acompanhamento dos
+        pedidos submetidos pelos candidatos.
+      </p>
+
+      <h2>Objectivos principais</h2>
+
+      <ul>
+        <li>Digitalizar a submissão de reclamações e pedidos de revisão.</li>
+        <li>Permitir o acompanhamento do estado dos pedidos.</li>
+        <li>Centralizar a informação submetida pelos candidatos.</li>
+        <li>Apoiar a triagem e classificação dos pedidos através de IA.</li>
+        <li>Disponibilizar informação analítica à Comissão de Exames.</li>
+        <li>Melhorar a rastreabilidade e o histórico das interacções.</li>
+        <li>Apoiar a identificação de padrões recorrentes nas reclamações.</li>
+      </ul>
+
+      <h2>Funcionalidades principais</h2>
+
+      <div class="feature-grid">
+
+        <div class="feature-card">
+          <h3>Submissão de reclamações</h3>
+          <p>
+            Registo online de reclamações relacionadas com resultados
+            e situações identificadas pelos candidatos.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <h3>Pedidos de revisão</h3>
+          <p>
+            Submissão e acompanhamento de pedidos de revisão de exames
+            de admissão.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <h3>Acompanhamento de pedidos</h3>
+          <p>
+            Consulta do estado dos pedidos e acesso ao histórico
+            das interacções realizadas.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <h3>Gestão administrativa</h3>
+          <p>
+            Visualização, organização e tratamento dos pedidos pela
+            Comissão de Exames ou utilizadores administrativos.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <h3>Classificação automática</h3>
+          <p>
+            Classificação das descrições submetidas em categorias
+            previamente definidas através de modelos de aprendizagem
+            automática.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <h3>Análise de sentimento</h3>
+          <p>
+            Análise do sentimento presente nas descrições dos pedidos
+            para complementar a interpretação da informação.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <h3>Relatórios e indicadores</h3>
+          <p>
+            Apresentação de informação organizada por categorias,
+            períodos, disciplinas e outros critérios analíticos.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <h3>Apoio à decisão</h3>
+          <p>
+            Utilização de resultados analíticos e previsões como apoio
+            à identificação de áreas que merecem maior atenção.
+          </p>
+        </div>
+
+      </div>
+
+      <h2>Motor de Inteligência Artificial</h2>
+
+      <p>
+        Uma das principais características do projecto é a integração
+        de um motor de Inteligência Artificial desenvolvido em Python
+        e disponibilizado através de uma API independente.
+      </p>
+
+      <p>
+        O motor foi concebido para apoiar diferentes tarefas de análise
+        de texto e dados, mantendo a possibilidade de encaminhar casos
+        de menor confiança para revisão humana.
+      </p>
+
+      <h3>Funcionalidades de IA desenvolvidas</h3>
+
+      <ul>
+        <li>
+          <strong>Classificação automática:</strong>
+          categorização de reclamações em cinco categorias.
+        </li>
+
+        <li>
+          <strong>Análise de sentimento:</strong>
+          identificação de tendências positivas, neutras ou negativas
+          nas descrições.
+        </li>
+
+        <li>
+          <strong>Confiança da previsão:</strong>
+          utilização de níveis de confiança para apoiar o encaminhamento
+          de casos para revisão humana.
+        </li>
+
+        <li>
+          <strong>Detecção de padrões:</strong>
+          análise de semelhanças e agrupamentos em reclamações.
+        </li>
+
+        <li>
+          <strong>Previsão:</strong>
+          utilização de modelos de aprendizagem automática para análise
+          de dados tabulares.
+        </li>
+
+        <li>
+          <strong>Assistente conversacional:</strong>
+          protótipo de chatbot baseado em recuperação de respostas
+          e análise de sentimento.
+        </li>
+
+        <li>
+          <strong>Auditoria e governança:</strong>
+          consideração de mecanismos de consentimento, anonimização,
+          hash e registo das operações relacionadas com IA.
+        </li>
+      </ul>
+
+      <h2>Arquitectura da solução</h2>
+
+      <p>
+        A solução foi estruturada através da separação entre a aplicação
+        principal e os serviços especializados de Inteligência Artificial.
+      </p>
+
+      <div class="architecture">
+        <code>
+[ Candidato / Administrador ]
+              │
+              ▼
+       [ React Frontend ]
+              │
+           HTTP / Axios
+              │
+              ▼
+        [ Laravel API ]
+          │          │
+          ▼          ▼
+      [ MySQL ]   [ FastAPI ]
+                      │
+                      ▼
+             [ Modelos de IA ]
+                      │
+                      ▼
+             [ Resultados /
+               Métricas /
+               Gráficos ]
+        </code>
+      </div>
+
+      <h3>Componentes principais</h3>
+
+      <ul>
+        <li>
+          <strong>React:</strong>
+          interface Web para candidatos e utilizadores administrativos.
+        </li>
+
+        <li>
+          <strong>Laravel:</strong>
+          backend principal, regras de negócio, autenticação e
+          persistência da aplicação.
+        </li>
+
+        <li>
+          <strong>MySQL:</strong>
+          armazenamento dos dados operacionais do sistema.
+        </li>
+
+        <li>
+          <strong>FastAPI:</strong>
+          micro-serviço Python responsável pela disponibilização
+          das funcionalidades de Inteligência Artificial.
+        </li>
+      </ul>
+
+      <h2>Validação do modelo de classificação</h2>
+
+      <p>
+        Durante a investigação, o classificador foi avaliado através
+        de validação cruzada estratificada com cinco divisões,
+        utilizando um conjunto de 348 registos distribuídos por
+        cinco categorias.
+      </p>
+
+      <div class="result-card">
+        <strong>94,54%</strong>
+        Accuracy média obtida pelo classificador.
+      </div>
+
+      <div class="result-card">
+        <strong>94,57%</strong>
+        F1 macro médio obtido na avaliação experimental.
+      </div>
+
+      <p>
+        Estes valores correspondem aos resultados da avaliação realizada
+        no contexto da investigação académica e não devem ser
+        interpretados automaticamente como garantias de desempenho
+        em ambiente de produção.
+      </p>
+
+      <h2>O meu trabalho no projecto</h2>
+
+      <p>
+        Participei no ciclo completo de concepção, desenvolvimento,
+        integração e validação do sistema, desde a definição do problema
+        até à implementação do protótipo funcional utilizado no trabalho
+        de monografia.
+      </p>
+
+      <ul>
+        <li>Definição do problema, objectivos e âmbito da solução.</li>
+        <li>Levantamento e análise de requisitos.</li>
+        <li>Definição de regras de negócio e fluxos funcionais.</li>
+        <li>Concepção da arquitectura React, Laravel e FastAPI.</li>
+        <li>Modelação de dados e organização das entidades.</li>
+        <li>Desenvolvimento da aplicação Web.</li>
+        <li>Implementação do backend e das operações CRUD.</li>
+        <li>Integração entre a aplicação Laravel e os micro-serviços Python.</li>
+        <li>Desenvolvimento directo dos serviços e componentes de IA.</li>
+        <li>Implementação de classificação, sentimento e análise de dados.</li>
+        <li>Testes funcionais e testes de integração.</li>
+        <li>Avaliação experimental dos modelos de aprendizagem automática.</li>
+        <li>Documentação técnica e elaboração do relatório de investigação.</li>
+      </ul>
+
+      <h2>Tecnologias utilizadas</h2>
+
+      <h3>Frontend</h3>
+
+      <div class="tech">
+        <span>React</span>
+        <span>JavaScript</span>
+        <span>Axios</span>
+        <span>Recharts</span>
+        <span>Tailwind CSS</span>
+      </div>
+
+      <h3>Backend</h3>
+
+      <div class="tech">
+        <span>PHP</span>
+        <span>Laravel</span>
+        <span>Eloquent ORM</span>
+        <span>Laravel Sanctum</span>
+        <span>MySQL</span>
+      </div>
+
+      <h3>Inteligência Artificial e Dados</h3>
+
+      <div class="tech">
+        <span>Python</span>
+        <span>FastAPI</span>
+        <span>Scikit-learn</span>
+        <span>TF-IDF</span>
+        <span>Naive Bayes</span>
+        <span>Random Forest</span>
+        <span>DBSCAN</span>
+        <span>Transformers</span>
+        <span>Hugging Face</span>
+        <span>Joblib</span>
+        <span>Pandas</span>
+        <span>Matplotlib</span>
+        <span>Pydantic</span>
+      </div>
+
+      <h3>Ferramentas</h3>
+
+      <div class="tech">
+        <span>Git</span>
+        <span>Postman</span>
+        <span>Insomnia</span>
+        <span>Validação cruzada</span>
+        <span>Calibração de confiança</span>
+      </div>
+
+      <h2>Galeria do projecto</h2>
+
+      <div class="screens">
+
+        <figure>
+          <img
+            src="../assets/img/sigrr-02.png"
+            alt="SIGRR — interface principal"
+            loading="lazy"
+          >
+          <figcaption>
+            Interface principal do SIGRR
+          </figcaption>
+        </figure>
+
+        <figure>
+          <img
+            src="../assets/img/estado-peticoes-sigrr.png"
+            alt="SIGRR — acompanhamento do estado das petições"
+            loading="lazy"
+          >
+          <figcaption>
+            Acompanhamento do estado dos pedidos
+          </figcaption>
+        </figure>
+
+        <figure>
+          <img
+            src="../assets/img/sigrr_admin_login.png"
+            alt="SIGRR — autenticação administrativa"
+            loading="lazy"
+          >
+          <figcaption>
+            Área de autenticação administrativa
+          </figcaption>
+        </figure>
+
+        <figure>
+          <img
+            src="../assets/img/Rec-Form-sigrr.png"
+            alt="SIGRR — formulário de reclamação"
+            loading="lazy"
+          >
+          <figcaption>
+            Formulário de submissão de reclamação
+          </figcaption>
+        </figure>
+
+        <figure>
+          <img
+            src="../assets/img/rev-form-sigrr.png"
+            alt="SIGRR — formulário de revisão"
+            loading="lazy"
+          >
+          <figcaption>
+            Formulário de pedido de revisão
+          </figcaption>
+        </figure>
+
+        <figure>
+          <img
+            src="../assets/img/IA-sigrr.png"
+            alt="SIGRR — funcionalidades de Inteligência Artificial"
+            loading="lazy"
+          >
+          <figcaption>
+            Área relacionada com análise e Inteligência Artificial
+          </figcaption>
+        </figure>
+
+      </div>
+
+      <h2>Contexto e estado do projecto</h2>
+
+      <p>
+        O SIGRR foi desenvolvido como projecto académico de investigação
+        no âmbito da minha Licenciatura em Informática. O resultado inclui
+        um protótipo funcional e uma avaliação experimental dos modelos
+        de Inteligência Artificial utilizados.
+      </p>
+
+      <div class="note">
+        <strong>Nota:</strong>
+        Os resultados apresentados correspondem ao contexto de validação
+        académica. A utilização em ambiente institucional de produção
+        exigiria etapas adicionais de segurança, testes operacionais,
+        validação com dados reais e aprovação dos procedimentos
+        institucionais aplicáveis.
+      </div>
+
+      <p class="note">
+        O código-fonte não está publicamente disponível neste momento.
+        O repositório poderá ser adicionado caso o projecto seja
+        preparado para publicação.
+      </p>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <span>
+        © <span id="year"></span> Jaime de Leite Zandamela
+      </span>
+
+      <span>
+        Maputo, Moçambique
+      </span>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelector("#year").textContent =
+      new Date().getFullYear();
+  </script>
+
+</body>
+</html>
