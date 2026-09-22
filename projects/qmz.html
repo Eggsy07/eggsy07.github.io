@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Website QMZ Tecnologia & Inovação | Jaime Zandamela</title>
+
+    <link rel="stylesheet" href="../style.css">
+
+    <style>
+        .project-page {
+            padding: 80px 0;
+        }
+
+        .project-page .lead {
+            font-size: 1.25rem;
+            line-height: 1.8;
+            color: var(--muted);
+            max-width: 850px;
+        }
+
+        .project-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 22px;
+        }
+
+        .project-meta span {
+            padding: 7px 12px;
+            border: 1px solid var(--line);
+            border-radius: 999px;
+            font-size: 0.85rem;
+            color: var(--muted);
+        }
+
+        .project-hero {
+            margin: 40px 0 65px;
+            overflow: hidden;
+            border-radius: 14px;
+        }
+
+        .project-hero img {
+            width: 100%;
+            display: block;
+        }
+
+        .project-page h2 {
+            margin-top: 65px;
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+
+        .project-page h3 {
+            margin-top: 0;
+            margin-bottom: 12px;
+            font-size: 1.15rem;
+        }
+
+        .project-page p {
+            line-height: 1.8;
+        }
+
+        .project-page li {
+            margin: 10px 0;
+            color: var(--muted);
+            line-height: 1.7;
+        }
+
+        .intro-grid,
+        .feature-grid,
+        .architecture-grid,
+        .stack-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .info-card,
+        .feature-card,
+        .architecture-card,
+        .stack-card {
+            padding: 24px;
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            background: var(--surface, transparent);
+        }
+
+        .info-card p,
+        .feature-card p,
+        .architecture-card p,
+        .stack-card p {
+            color: var(--muted);
+            margin-bottom: 0;
+        }
+
+        .feature-card ul,
+        .architecture-card ul,
+        .stack-card ul {
+            padding-left: 20px;
+            margin-bottom: 0;
+        }
+
+        .architecture-flow {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            align-items: center;
+            gap: 16px;
+            margin-top: 30px;
+        }
+
+        .architecture-node {
+            padding: 28px 20px;
+            text-align: center;
+            border: 1px solid var(--line);
+            border-radius: 12px;
+        }
+
+        .architecture-node strong {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .architecture-node span {
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        .architecture-arrow {
+            color: var(--muted);
+            font-size: 1.5rem;
+        }
+
+        .architecture-code {
+            margin-top: 25px;
+            padding: 24px;
+            overflow-x: auto;
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            background: var(--surface, transparent);
+            font-family: monospace;
+            line-height: 1.8;
+            color: var(--muted);
+            white-space: pre;
+        }
+
+        .content-types {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin-top: 22px;
+        }
+
+        .content-type {
+            padding: 16px;
+            border: 1px solid var(--line);
+            border-radius: 10px;
+        }
+
+        .content-type strong {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .content-type span {
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        .screens {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+        }
+
+        .screens figure {
+            margin: 0;
+        }
+
+        .screens img {
+            width: 100%;
+            display: block;
+            border-radius: 10px;
+            border: 1px solid var(--line);
+        }
+
+        .screens figcaption {
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: var(--muted);
+        }
+
+        .tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .tech span {
+            display: inline-block;
+            padding: 9px 13px;
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            font-size: 0.9rem;
+        }
+
+        .note {
+            margin-top: 28px;
+            padding: 20px;
+            border: 1px dashed var(--line);
+            border-radius: 12px;
+            color: var(--muted);
+        }
+
+        .note strong {
+            color: var(--text);
+        }
+
+        @media (max-width: 700px) {
+            .project-page {
+                padding: 55px 0;
+            }
+
+            .intro-grid,
+            .feature-grid,
+            .architecture-grid,
+            .stack-grid,
+            .screens,
+            .content-types {
+                grid-template-columns: 1fr;
+            }
+
+            .architecture-flow {
+                grid-template-columns: 1fr;
+            }
+
+            .architecture-arrow {
+                text-align: center;
+                transform: rotate(90deg);
+            }
+
+            .project-page h2 {
+                font-size: 1.65rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header class="site-header">
+    <div class="container nav">
+        <a class="brand" href="../index.html">
+            JLZ<span>.</span>
+        </a>
+
+        <a class="button secondary" href="../index.html#projectos">
+            ← Projectos
+        </a>
+    </div>
+</header>
+
+<main class="project-page">
+    <div class="container narrow">
+
+        <p class="eyebrow">
+            PROJECTO INSTITUCIONAL · QMZ TECNOLOGIA
+        </p>
+
+        <h1>
+            Website QMZ Tecnologia & Inovação
+        </h1>
+
+        <p class="lead">
+            Website institucional desenvolvido para a QMZ Tecnologia & Inovação,
+            Lda., com arquitectura headless, frontend em Next.js e gestão de
+            conteúdos através do CMS Strapi.
+        </p>
+
+        <div class="project-meta">
+            <span>Projecto Institucional</span>
+            <span>Desenvolvimento 100% próprio</span>
+            <span>Full-Stack Web</span>
+            <span>Next.js</span>
+            <span>Strapi</span>
+            <span>Vercel</span>
+        </div>
+
+        <figure class="project-hero">
+            <img
+                src="../assets/img/QMZ-Web-Home.png"
+                alt="Website institucional da QMZ Tecnologia — página inicial"
+        </figure>
+
+        <h2>
+            Sobre o projecto
+        </h2>
+
+        <p>
+            O Website QMZ Tecnologia foi concebido como a presença digital
+            institucional da QMZ Tecnologia & Inovação, Lda., apresentando a
+            empresa, os seus serviços, projectos, produtos e sistemas desenvolvidos.
+        </p>
+
+        <p>
+            Para além da apresentação institucional, o website foi estruturado
+            para permitir a gestão dinâmica de conteúdos através de um CMS
+            headless. Desta forma, a equipa pode actualizar informações,
+            serviços, portfólio, depoimentos e outros conteúdos sem depender
+            directamente de alterações no código do frontend.
+        </p>
+
+        <p>
+            O frontend encontra-se preparado para publicação na Vercel,
+            enquanto o CMS Strapi funciona como camada de gestão de conteúdos
+            e disponibilização de dados através de uma API REST.
+        </p>
+
+        <h2>
+            Problemas e necessidades identificados
+        </h2>
+
+        <div class="intro-grid">
+
+            <article class="info-card">
+                <h3>Actualização limitada de conteúdos</h3>
+
+                <p>
+                    Websites estáticos podem exigir alterações directas no código
+                    sempre que seja necessário actualizar textos, serviços,
+                    projectos ou depoimentos.
+                </p>
+            </article>
+
+            <article class="info-card">
+                <h3>Presença institucional</h3>
+
+                <p>
+                    A empresa necessitava de uma presença online profissional
+                    para apresentar os seus serviços, soluções, projectos e
+                    canais de contacto.
+                </p>
+            </article>
+
+            <article class="info-card">
+                <h3>Conteúdo desacoplado</h3>
+
+                <p>
+                    A gestão de conteúdos deveria estar separada da camada de
+                    apresentação, permitindo a evolução independente do website
+                    e do CMS.
+                </p>
+            </article>
+
+            <article class="info-card">
+                <h3>Centralização comercial</h3>
+
+                <p>
+                    O website reúne informações institucionais, serviços,
+                    portfólio, produtos, contactos e pedidos de agendamento
+                    num único ambiente digital.
+                </p>
+            </article>
+
+        </div>
+
+        <h2>
+            Benefícios da solução
+        </h2>
+
+        <div class="feature-grid">
+
+            <article class="feature-card">
+                <h3>Gestão de conteúdos sem código</h3>
+
+                <p>
+                    Serviços, projectos, depoimentos e outros conteúdos podem
+                    ser geridos através do painel do Strapi.
+                </p>
+            </article>
+
+            <article class="feature-card">
+                <h3>Performance e SEO</h3>
+
+                <p>
+                    Utilização do Next.js com App Router e possibilidade de
+                    publicação optimizada através da Vercel.
+                </p>
+            </article>
+
+            <article class="feature-card">
+                <h3>Escalabilidade</h3>
+
+                <p>
+                    Separação entre frontend e CMS, permitindo que cada camada
+                    evolua de forma independente.
+                </p>
+            </article>
+
+            <article class="feature-card">
+                <h3>Manutenção simplificada</h3>
+
+                <p>
+                    Actualização de conteúdos e media através do CMS, reduzindo
+                    a necessidade de alterar directamente o código do website.
+                </p>
+            </article>
+
+            <article class="feature-card">
+                <h3>Presença comercial integrada</h3>
+
+                <p>
+                    Apresentação de serviços, sistemas, produtos, portfólio,
+                    contactos e agendamentos numa única plataforma.
+                </p>
+            </article>
+
+            <article class="feature-card">
+                <h3>Preparação para multi-idioma</h3>
+
+                <p>
+                    Estrutura preparada para suporte a português e inglês através
+                    de i18next e react-i18next.
+                </p>
+            </article>
+
+        </div>
+
+        <h2>
+            Páginas e funcionalidades
+        </h2>
+
+        <div class="feature-grid">
+
+            <article class="feature-card">
+                <h3>Página inicial</h3>
+
+                <ul>
+                    <li>Banner institucional.</li>
+                    <li>Resumo dos serviços.</li>
+                    <li>Apresentação de depoimentos.</li>
+                    <li>Links para sistemas e produtos.</li>
+                    <li>Chamadas para acção.</li>
+                </ul>
+            </article>
+
+            <article class="feature-card">
+                <h3>Sobre a empresa</h3>
+
+                <ul>
+                    <li>Apresentação institucional.</li>
+                    <li>Informações sobre a empresa.</li>
+                    <li>Experiência e diferenciais.</li>
+                </ul>
+            </article>
+
+            <article class="feature-card">
+                <h3>Serviços</h3>
+
+                <ul>
+                    <li>Listagem de serviços.</li>
+                    <li>Páginas dinâmicas por slug.</li>
+                    <li>Sub-serviços.</li>
+                    <li>Layouts variáveis.</li>
+                    <li>Informações e elementos de SEO.</li>
+                </ul>
+            </article>
+
+            <article class="feature-card">
+                <h3>Portfólio</h3>
+
+                <ul>
+                    <li>Apresentação de projectos.</li>
+                    <li>Título e descrição.</li>
+                    <li>Imagens e cliente.</li>
+                    <li>Ano e ligação para o projecto.</li>
+                </ul>
+            </article>
+
+            <article class="feature-card">
+                <h3>Sistemas e produtos</h3>
+
+                <ul>
+                    <li>Apresentação de sistemas desenvolvidos.</li>
+                    <li>Descrições de produtos.</li>
+                    <li>Ligações para plataformas e soluções.</li>
+                </ul>
+            </article>
+
+            <article class="feature-card">
+                <h3>Contactos e agendamentos</h3>
+
+                <ul>
+                    <li>Formulário de contacto.</li>
+                    <li>Integração com WhatsApp e email.</li>
+                    <li>Localização da empresa.</li>
+                    <li>Formulário de agendamento.</li>
+                    <li>Selecção de serviço e data.</li>
+                    <li>Observações do cliente.</li>
+                </ul>
+            </article>
+
+            <article class="feature-card">
+                <h3>Páginas legais</h3>
+
+                <ul>
+                    <li>Política de Privacidade.</li>
+                    <li>Termos de Uso.</li>
+                </ul>
+            </article>
+
+            <article class="feature-card">
+                <h3>Idiomas</h3>
+
+                <ul>
+                    <li>Preparação para português e inglês.</li>
+                    <li>Estrutura de tradução com i18next.</li>
+                </ul>
+            </article>
+
+        </div>
+
+        <h2>
+            Arquitectura headless
+        </h2>
+
+        <p>
+            A solução adopta uma arquitectura headless, na qual o frontend
+            responsável pela apresentação do website está separado do CMS
+            responsável pela gestão dos conteúdos.
+        </p>
+
+        <div class="architecture-flow">
+
+            <div class="architecture-node">
+                <strong>Next.js 15</strong>
+                <span>
+                    Frontend, interfaces, rotas, componentes e SEO
+                </span>
+            </div>
+
+            <div class="architecture-arrow">
+                ⇄
+            </div>
+
+            <div class="architecture-node">
+                <strong>Strapi 5</strong>
+                <span>
+                    CMS, conteúdos, media e API REST
+                </span>
+            </div>
+
+        </div>
+
+        <div class="architecture-code">[ Utilizador ]
+       │
+       ▼
+[ Next.js 15 — Vercel ]
+       │
+       │ API REST
+       ▼
+[ Strapi 5 — CMS ]
+       │
+       ├── Conteúdos
+       ├── Media
+       ├── Serviços
+       ├── Portfólio
+       ├── Depoimentos
+       ├── Contactos
+       └── Agendamentos</div>
+
+        <h2>
+            Estrutura técnica
+        </h2>
+
+        <div class="architecture-grid">
+
+            <article class="architecture-card">
+                <h3>Frontend</h3>
+
+                <ul>
+                    <li>Next.js 15.</li>
+                    <li>App Router.</li>
+                    <li>React 19.</li>
+                    <li>TypeScript.</li>
+                    <li>Tailwind CSS 4.</li>
+                    <li>Componentes reutilizáveis.</li>
+                    <li>Rotas e páginas dinâmicas.</li>
+                </ul>
+            </article>
+
+            <article class="architecture-card">
+                <h3>Integração e dados</h3>
+
+                <ul>
+                    <li>Consumo da API REST do Strapi.</li>
+                    <li>Axios para comunicação HTTP.</li>
+                    <li>Conteúdos geridos através do CMS.</li>
+                    <li>Separação entre apresentação e conteúdo.</li>
+                </ul>
+            </article>
+
+            <article class="architecture-card">
+                <h3>Experiência de utilização</h3>
+
+                <ul>
+                    <li>Framer Motion para animações.</li>
+                    <li>Swiper para carrosséis.</li>
+                    <li>Lucide React para ícones.</li>
+                    <li>Layouts responsivos.</li>
+                </ul>
+            </article>
+
+            <article class="architecture-card">
+                <h3>Publicação e infraestrutura</h3>
+
+                <ul>
+                    <li>Frontend publicado na Vercel.</li>
+                    <li>CMS Strapi alojado remotamente.</li>
+                    <li>API remota para consumo de conteúdos.</li>
+                    <li>PostgreSQL ou SQLite conforme o ambiente.</li>
+                </ul>
+            </article>
+
+        </div>
+
+        <h2>
+            Content Types no Strapi
+        </h2>
+
+        <p>
+            O CMS foi organizado através de tipos de conteúdo específicos,
+            permitindo gerir diferentes áreas do website de forma estruturada.
+        </p>
+
+        <div class="content-types">
+
+            <div class="content-type">
+                <strong>servico</strong>
+                <span>Serviços, sub-serviços, layouts, SEO e banners.</span>
+            </div>
+
+            <div class="content-type">
+                <strong>portfolio</strong>
+                <span>Projectos, descrições, imagens, clientes e ligações.</span>
+            </div>
+
+            <div class="content-type">
+                <strong>produto</strong>
+                <span>Produtos e sistemas desenvolvidos.</span>
+            </div>
+
+            <div class="content-type">
+                <strong>depoimento</strong>
+                <span>Testemunhos, cargos, empresas e fotografias.</span>
+            </div>
+
+            <div class="content-type">
+                <strong>contacto</strong>
+                <span>Mensagens submetidas através do formulário de contacto.</span>
+            </div>
+
+            <div class="content-type">
+                <strong>agendamento</strong>
+                <span>Pedidos de agendamento associados a serviços.</span>
+            </div>
+
+            <div class="content-type">
+                <strong>configuracao-do-site</strong>
+                <span>Configurações globais do website.</span>
+            </div>
+
+        </div>
+
+        <h2>
+            O meu papel e contribuições
+        </h2>
+
+        <p>
+            No âmbito da QMZ Tecnologia & Inovação, Lda., fui responsável a
+            100% pelo desenvolvimento do website institucional, participando
+            directamente na concepção, implementação, integração e preparação
+            da solução para publicação.
+        </p>
+
+        <ul>
+            <li>Concepção da estrutura geral do website institucional.</li>
+            <li>Desenvolvimento do frontend em Next.js.</li>
+            <li>Implementação de interfaces com React e TypeScript.</li>
+            <li>Construção de páginas institucionais e componentes reutilizáveis.</li>
+            <li>Implementação de páginas dinâmicas de serviços.</li>
+            <li>Integração do frontend com o CMS Strapi.</li>
+            <li>Consumo de conteúdos através da API REST.</li>
+            <li>Estruturação dos conteúdos geridos pelo CMS.</li>
+            <li>Integração de serviços, portfólio e depoimentos.</li>
+            <li>Implementação de formulários de contacto e agendamento.</li>
+            <li>Preparação do suporte multi-idioma.</li>
+            <li>Configuração do deploy do frontend na Vercel.</li>
+            <li>Integração com a API remota do CMS em ambiente de produção.</li>
+            <li>Organização e evolução da solução frontend e CMS.</li>
+        </ul>
+
+        <h2>
+            Tecnologias utilizadas
+        </h2>
+
+        <div class="tech">
+            <span>Next.js 15</span>
+            <span>React 19</span>
+            <span>TypeScript</span>
+            <span>Tailwind CSS 4</span>
+            <span>Axios</span>
+            <span>Framer Motion</span>
+            <span>i18next</span>
+            <span>react-i18next</span>
+            <span>Swiper</span>
+            <span>Lucide React</span>
+            <span>Strapi 5</span>
+            <span>API REST</span>
+            <span>PostgreSQL</span>
+            <span>SQLite</span>
+            <span>Vercel</span>
+        </div>
+
+        <h2>
+            Galeria do projecto
+        </h2>
+
+        <div class="screens">
+
+            <figure>
+                <img
+                    src="../assets/img/QMZ-Web-Home.png"
+                    alt="Website QMZ Tecnologia — página inicial"
+                    loading="lazy"
+                >
+
+                <figcaption>
+                    Página inicial do website institucional.
+                </figcaption>
+            </figure>
+
+            <figure>
+                <img
+                    src="../assets/img/QMZ-Servicos.png"
+                    alt="Website QMZ Tecnologia — página de serviços"
+                    loading="lazy"
+                >
+
+                <figcaption>
+                    Página de apresentação dos serviços.
+                </figcaption>
+            </figure>
+
+            <figure>
+                <img
+                    src="../assets/img/QMZ-Portfolio.png"
+                    alt="Website QMZ Tecnologia — página de portfólio"
+                    loading="lazy"
+                >
+
+                <figcaption>
+                    Página de apresentação do portfólio.
+                </figcaption>
+            </figure>
+
+        </div>
+
+        <h2>
+            Estado do projecto
+        </h2>
+
+        <p>
+            O website institucional foi desenvolvido para servir como plataforma
+            oficial de apresentação da QMZ Tecnologia & Inovação, Lda., com uma
+            estrutura preparada para evolução contínua, publicação de novos
+            conteúdos e expansão das funcionalidades institucionais e comerciais.
+        </p>
+
+        <div class="note">
+            <strong>Autoria:</strong>
+            Este projecto foi desenvolvido integralmente por mim, no âmbito da
+            QMZ Tecnologia & Inovação, Lda., abrangendo o frontend em Next.js,
+            a integração com o Strapi, a estruturação das páginas e a preparação
+            do deploy na Vercel.
+        </div>
+
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <span>
+            © <span id="year"></span> Jaime de Leite Zandamela
+        </span>
+
+        <span>
+            Maputo, Moçambique
+        </span>
+    </div>
+</footer>
+
+<script>
+    document.querySelector("#year").textContent =
+        new Date().getFullYear();
+</script>
+
+</body>
+</html>

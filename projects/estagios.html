@@ -1,11 +1,628 @@
 <!DOCTYPE html>
 <html lang="pt">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Sistema de Gestão de Estágios | Jaime Zandamela</title><link rel="stylesheet" href="../style.css"><style>
-.project-page{padding:80px 0}.project-page .lead{font-size:1.25rem;color:var(--muted);max-width:750px}.project-hero{margin:35px 0 55px;min-height:360px}.project-page h2{font-size:2rem;margin-top:55px}.project-page li{margin:8px 0;color:var(--muted)}.screens{display:grid;grid-template-columns:1fr 1fr;gap:16px}.screens>div{aspect-ratio:16/9;display:grid;place-items:center}.note{padding:18px;border:1px dashed var(--line);border-radius:10px}@media(max-width:700px){.screens{grid-template-columns:1fr}}
-</style></head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SGE — Sistema de Gestão de Estágios | Jaime Zandamela</title>
+
+    <link rel="stylesheet" href="../style.css">
+
+    <style>
+        .project-page {
+            padding: 80px 0;
+        }
+
+        .project-page .lead {
+            font-size: 1.25rem;
+            line-height: 1.8;
+            color: var(--muted);
+            max-width: 820px;
+        }
+
+        .project-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 22px;
+        }
+
+        .project-meta span {
+            padding: 7px 12px;
+            border: 1px solid var(--line);
+            border-radius: 999px;
+            font-size: 0.85rem;
+            color: var(--muted);
+        }
+
+        .project-hero {
+            margin: 40px 0 65px;
+            overflow: hidden;
+            border-radius: 14px;
+        }
+
+        .project-hero img {
+            width: 100%;
+            display: block;
+        }
+
+        .project-page h2 {
+            margin-top: 65px;
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+
+        .project-page h3 {
+            margin-top: 28px;
+            margin-bottom: 12px;
+            font-size: 1.15rem;
+        }
+
+        .project-page p {
+            line-height: 1.8;
+        }
+
+        .project-page li {
+            margin: 10px 0;
+            color: var(--muted);
+            line-height: 1.7;
+        }
+
+        .intro-grid,
+        .feature-grid,
+        .architecture-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .info-card,
+        .feature-card,
+        .architecture-card {
+            padding: 24px;
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            background: var(--surface, transparent);
+        }
+
+        .info-card h3,
+        .feature-card h3,
+        .architecture-card h3 {
+            margin-top: 0;
+        }
+
+        .info-card p,
+        .feature-card p,
+        .architecture-card p {
+            color: var(--muted);
+            margin-bottom: 0;
+        }
+
+        .feature-card ul,
+        .architecture-card ul {
+            padding-left: 20px;
+            margin-bottom: 0;
+        }
+
+        .domain-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 22px;
+        }
+
+        .domain-list span,
+        .tech span {
+            display: inline-block;
+            padding: 9px 13px;
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            font-size: 0.9rem;
+        }
+
+        .architecture-code {
+            margin-top: 24px;
+            padding: 24px;
+            overflow-x: auto;
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            background: var(--surface, transparent);
+            font-family: monospace;
+            line-height: 1.8;
+            color: var(--muted);
+            white-space: pre;
+        }
+
+        .contribution-list {
+            padding-left: 22px;
+        }
+
+        .screens {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+        }
+
+        .screens figure {
+            margin: 0;
+        }
+
+        .screens img {
+            width: 100%;
+            display: block;
+            border-radius: 10px;
+            border: 1px solid var(--line);
+        }
+
+        .screens figcaption {
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: var(--muted);
+        }
+
+        .tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .note {
+            margin-top: 28px;
+            padding: 20px;
+            border: 1px dashed var(--line);
+            border-radius: 12px;
+            color: var(--muted);
+        }
+
+        .note strong {
+            color: var(--text);
+        }
+
+        @media (max-width: 700px) {
+            .project-page {
+                padding: 55px 0;
+            }
+
+            .intro-grid,
+            .feature-grid,
+            .architecture-grid,
+            .screens {
+                grid-template-columns: 1fr;
+            }
+
+            .project-page h2 {
+                font-size: 1.65rem;
+            }
+        }
+    </style>
+</head>
+
 <body>
-<header class="site-header"><div class="container nav"><a class="brand" href="../index.html">JLZ<span>.</span></a><a class="button secondary" href="../index.html#projectos">← Projectos</a></div></header>
-<main class="project-page"><div class="container narrow"><p class="eyebrow">PROJECTO WEB · 2024</p><h1>Sistema de Gestão de Estágios</h1><p class="lead">Sistema para gestão e acompanhamento de processos relacionados com estágios.</p><figure class="project-hero"><img src="../assets/img/Estagios-cover.png" alt="Sistema de Gestão de Estágios — screenshot principal"></figure><h2>O meu trabalho</h2><ul><li>Levantamento e análise de requisitos.</li><li>Desenvolvimento do backend.</li><li>Implementação de funcionalidades Web.</li><li>POO e evolução para MVC.</li><li>CRUD e integração com MySQL.</li><li>Correcção e manutenção.</li></ul><h2>Galeria do projecto</h2><div class="screens"><figure><img src="../assets/img/Estagios-Sobre.png" alt="Sistema de Gestão de Estágios — ecrã 01" loading="lazy"><figcaption>Sistema de Gestão de Estágios — ecrã 01</figcaption></figure></div><h2>Tecnologias</h2><div class="tech"><span>PHP</span><span>MySQL</span><span>JavaScript</span><span>HTML5</span><span>CSS3</span><span>Bootstrap</span><span>MVC</span></div></div></main>
-<footer><div class="container"><span>© <span id="year"></span> Jaime de Leite Zandamela</span><span>Maputo, Moçambique</span></div></footer>
-<script>document.querySelector("#year").textContent=new Date().getFullYear();</script>
-</body></html>
+
+<header class="site-header">
+    <div class="container nav">
+        <a class="brand" href="../index.html">
+            JLZ<span>.</span>
+        </a>
+
+        <a class="button secondary" href="../index.html#projectos">
+            ← Projectos
+        </a>
+    </div>
+</header>
+
+<main class="project-page">
+    <div class="container narrow">
+
+        <p class="eyebrow">
+            PROJECTO WEB · SISTEMA DE GESTÃO ACADÉMICA
+        </p>
+
+        <h1>
+            SGE — Sistema de Gestão de Estágios
+        </h1>
+
+        <p class="lead">
+            Plataforma Web concebida para aproximar faculdades, empresas parceiras
+            e estudantes num ambiente digital centralizado para publicação,
+            gestão e candidatura a vagas de estágio.
+        </p>
+
+        <div class="project-meta">
+            <span>Analista Programador</span>
+            <span>Desenvolvimento Web</span>
+            <span>PHP</span>
+            <span>MVC</span>
+            <span>MySQL</span>
+        </div>
+
+        <figure class="project-hero">
+            <img
+                src="../assets/img/Estagios-cover.png"
+                alt="SGE — Sistema de Gestão de Estágios"
+        </figure>
+
+        <h2>
+            Sobre o projecto
+        </h2>
+
+        <p>
+            O SGE — Sistema de Gestão de Estágios — foi concebido como uma
+            plataforma Web para facilitar a ligação entre instituições de ensino,
+            empresas parceiras e estudantes interessados em oportunidades de
+            estágio.
+        </p>
+
+        <p>
+            A solução organiza num único ambiente digital processos relacionados
+            com o registo de entidades, publicação de vagas, candidaturas e
+            acompanhamento administrativo, permitindo uma gestão mais estruturada
+            das oportunidades de estágio.
+        </p>
+
+        <h2>
+            Problema que procura resolver
+        </h2>
+
+        <div class="intro-grid">
+
+            <article class="info-card">
+                <h3>Informação dispersa</h3>
+                <p>
+                    Empresas podem divulgar oportunidades através de diferentes
+                    canais, dificultando o acesso centralizado às vagas.
+                </p>
+            </article>
+
+            <article class="info-card">
+                <h3>Acompanhamento académico</h3>
+                <p>
+                    As faculdades necessitam de mecanismos mais organizados para
+                    administrar e acompanhar os processos relacionados com estágios.
+                </p>
+            </article>
+
+            <article class="info-card">
+                <h3>Acesso dos estudantes</h3>
+                <p>
+                    Os estudantes podem perder oportunidades quando não existe
+                    um canal único para consultar e candidatar-se a vagas.
+                </p>
+            </article>
+
+            <article class="info-card">
+                <h3>Falta de histórico estruturado</h3>
+                <p>
+                    A ausência de registos centralizados dificulta a consulta do
+                    histórico de vagas e candidaturas.
+                </p>
+            </article>
+
+        </div>
+
+        <h2>
+            Proposta de valor
+        </h2>
+
+        <p>
+            O SGE procura funcionar como um ponto de encontro digital entre três
+            actores principais: faculdades, empresas e estudantes.
+        </p>
+
+        <div class="feature-grid">
+
+            <article class="feature-card">
+                <h3>Centralização</h3>
+                <p>
+                    Reúne vagas, empresas, estudantes e candidaturas num único
+                    ambiente de gestão.
+                </p>
+            </article>
+
+            <article class="feature-card">
+                <h3>Visibilidade</h3>
+                <p>
+                    Facilita a descoberta de oportunidades por estudantes e a
+                    divulgação de vagas por empresas.
+                </p>
+            </article>
+
+            <article class="feature-card">
+                <h3>Gestão académica</h3>
+                <p>
+                    Disponibiliza ferramentas para a administração das entidades
+                    e dos processos associados aos estágios.
+                </p>
+            </article>
+
+            <article class="feature-card">
+                <h3>Rastreabilidade</h3>
+                <p>
+                    Estrutura o registo de vagas e candidaturas, permitindo
+                    consultar o histórico dos processos.
+                </p>
+            </article>
+
+        </div>
+
+        <h2>
+            Módulos e funcionalidades
+        </h2>
+
+        <div class="feature-grid">
+
+            <article class="feature-card">
+                <h3>Área pública</h3>
+
+                <ul>
+                    <li>Página inicial de apresentação da plataforma.</li>
+                    <li>Listagem de vagas de estágio.</li>
+                    <li>Visualização de oportunidades disponíveis.</li>
+                    <li>Candidatura a vagas.</li>
+                    <li>Secção de contacto e registo.</li>
+                </ul>
+            </article>
+
+            <article class="feature-card">
+                <h3>Administração da faculdade</h3>
+
+                <ul>
+                    <li>Registo, edição e listagem de faculdades.</li>
+                    <li>Gestão de administradores associados a faculdades.</li>
+                    <li>Gestão de empresas parceiras.</li>
+                    <li>Painel administrativo.</li>
+                </ul>
+            </article>
+
+            <article class="feature-card">
+                <h3>Área de empresas parceiras</h3>
+
+                <ul>
+                    <li>Registo de vagas de estágio.</li>
+                    <li>Listagem de oportunidades publicadas.</li>
+                    <li>Edição de vagas.</li>
+                    <li>Visualização das próprias oportunidades.</li>
+                </ul>
+            </article>
+
+            <article class="feature-card">
+                <h3>Gestão de candidaturas</h3>
+
+                <ul>
+                    <li>Registo de estudantes.</li>
+                    <li>Associação de estudantes a vagas.</li>
+                    <li>Registo de candidaturas.</li>
+                    <li>Organização do histórico de candidaturas.</li>
+                </ul>
+            </article>
+
+        </div>
+
+        <h2>
+            Entidades principais do domínio
+        </h2>
+
+        <p>
+            A estrutura funcional do sistema foi organizada em torno das seguintes
+            entidades principais:
+        </p>
+
+        <div class="domain-list">
+            <span>Faculdade</span>
+            <span>Administração</span>
+            <span>Empresa</span>
+            <span>Vaga de Estágio</span>
+            <span>Estudante</span>
+            <span>Candidatura</span>
+        </div>
+
+        <h2>
+            Arquitectura da solução
+        </h2>
+
+        <p>
+            O projecto utiliza uma arquitectura MVC — Model–View–Controller —
+            desenvolvida em PHP, com separação entre apresentação, controlo,
+            lógica de dados e configuração da aplicação.
+        </p>
+
+        <div class="architecture-grid">
+
+            <article class="architecture-card">
+                <h3>Model</h3>
+                <p>
+                    Responsável pela representação dos dados, acesso à base de
+                    dados e implementação de regras relacionadas com as entidades.
+                </p>
+            </article>
+
+            <article class="architecture-card">
+                <h3>View</h3>
+                <p>
+                    Camada responsável pela apresentação das interfaces públicas,
+                    administrativas e destinadas às empresas parceiras.
+                </p>
+            </article>
+
+            <article class="architecture-card">
+                <h3>Controller</h3>
+                <p>
+                    Recebe os pedidos, coordena o processamento das operações e
+                    estabelece a ligação entre as views e os models.
+                </p>
+            </article>
+
+            <article class="architecture-card">
+                <h3>Router</h3>
+                <p>
+                    Organiza o encaminhamento dos pedidos através de rotas
+                    baseadas em URI.
+                </p>
+            </article>
+
+        </div>
+
+        <div class="architecture-code">public/
+├── index.php
+└── assets/
+
+app/
+├── controllers/
+│   ├── Faculdade
+│   ├── Empresa
+│   ├── VagaEstagio
+│   └── Administracao
+├── models/
+└── views/
+    ├── admin/
+    ├── parceiros/
+    └── publica/
+
+config/
+├── database.php
+└── autoload.php
+
+.htaccess</div>
+
+        <h2>
+            Tecnologias e componentes
+        </h2>
+
+        <div class="tech">
+            <span>PHP</span>
+            <span>MySQL</span>
+            <span>PDO</span>
+            <span>HTML5</span>
+            <span>CSS3</span>
+            <span>JavaScript</span>
+            <span>Bootstrap</span>
+            <span>MVC</span>
+            <span>Autoload de Classes</span>
+            <span>Router por URI</span>
+            <span>.htaccess</span>
+            <span>password_hash</span>
+        </div>
+
+        <h2>
+            Base de dados
+        </h2>
+
+        <p>
+            A base de dados foi estruturada para suportar o registo das
+            instituições, empresas, estudantes, oportunidades de estágio e
+            respectivas candidaturas.
+        </p>
+
+        <div class="domain-list">
+            <span>faculdade</span>
+            <span>administracao</span>
+            <span>empresa</span>
+            <span>vaga_estagio</span>
+            <span>estudante</span>
+            <span>candidatura</span>
+        </div>
+
+        <h2>
+            O meu papel e contribuições
+        </h2>
+
+        <p>
+            A minha participação esteve relacionada com a análise, concepção e
+            desenvolvimento de componentes fundamentais da plataforma, incluindo
+            a estruturação da aplicação e a implementação das suas principais
+            áreas funcionais.
+        </p>
+
+        <ul class="contribution-list">
+            <li>Levantamento e análise de requisitos.</li>
+            <li>Concepção da estrutura funcional do sistema.</li>
+            <li>Modelação das entidades e da base de dados.</li>
+            <li>Implementação da arquitectura MVC em PHP.</li>
+            <li>Desenvolvimento do backend e das funcionalidades Web.</li>
+            <li>Implementação dos módulos de faculdades e administração.</li>
+            <li>Desenvolvimento da área de empresas parceiras.</li>
+            <li>Implementação da área pública de vagas e candidaturas.</li>
+            <li>Integração com MySQL através de PDO.</li>
+            <li>Aplicação de operações CRUD.</li>
+            <li>Implementação de mecanismos de autenticação e hash de passwords.</li>
+            <li>Correcção, manutenção e evolução do sistema.</li>
+        </ul>
+
+        <h2>
+            Galeria do projecto
+        </h2>
+
+        <div class="screens">
+
+            <figure>
+                <img
+                    src="../assets/img/Estagios-Sobre.png"
+                    alt="SGE — Página de apresentação"
+                    loading="lazy"
+                >
+
+                <figcaption>
+                    Página de apresentação do Sistema de Gestão de Estágios.
+                </figcaption>
+            </figure>
+
+            <!--
+            Adicionar aqui outras imagens quando estiverem disponíveis.
+
+            <figure>
+                <img
+                    src="../assets/img/Estagios-Admin.png"
+                    alt="SGE — Painel administrativo"
+                    loading="lazy"
+                >
+
+                <figcaption>
+                    Painel administrativo.
+                </figcaption>
+            </figure>
+            -->
+
+        </div>
+
+        <h2>
+            Estado do projecto
+        </h2>
+
+        <p>
+            O SGE representa uma solução Web orientada à organização e
+            centralização dos processos de gestão de estágios, com uma estrutura
+            funcional baseada na ligação entre instituições de ensino, empresas
+            e estudantes.
+        </p>
+
+        <div class="note">
+            <strong>Nota sobre o projecto:</strong>
+            Esta página apresenta o conceito, a organização funcional e os
+            componentes técnicos associados ao SGE. O estado exacto de cada
+            funcionalidade deve ser interpretado de acordo com a versão do
+            sistema e o nível de implementação efectivamente alcançado.
+        </div>
+
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <span>
+            © <span id="year"></span> Jaime de Leite Zandamela
+        </span>
+
+        <span>
+            Maputo, Moçambique
+        </span>
+    </div>
+</footer>
+
+<script>
+    document.querySelector("#year").textContent =
+        new Date().getFullYear();
+</script>
+
+</body>
+</html>
