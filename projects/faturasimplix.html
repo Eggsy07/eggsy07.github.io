@@ -1,11 +1,637 @@
 <!DOCTYPE html>
 <html lang="pt">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>FaturaSimplix Business | Jaime Zandamela</title><link rel="stylesheet" href="../style.css"><style>
-.project-page{padding:80px 0}.project-page .lead{font-size:1.25rem;color:var(--muted);max-width:750px}.project-hero{margin:35px 0 55px;min-height:360px}.project-page h2{font-size:2rem;margin-top:55px}.project-page li{margin:8px 0;color:var(--muted)}.screens{display:grid;grid-template-columns:1fr 1fr;gap:16px}.screens>div{aspect-ratio:16/9;display:grid;place-items:center}.note{padding:18px;border:1px dashed var(--line);border-radius:10px}@media(max-width:700px){.screens{grid-template-columns:1fr}}
-</style></head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>
+    FaturaSimplix Business | Jaime Zandamela
+  </title>
+
+  <link rel="stylesheet" href="../style.css">
+
+  <style>
+    .project-page {
+      padding: 80px 0;
+    }
+
+    .project-page .lead {
+      font-size: 1.25rem;
+      color: var(--muted);
+      max-width: 820px;
+      line-height: 1.7;
+    }
+
+    .project-hero {
+      margin: 35px 0 55px;
+      min-height: 360px;
+    }
+
+    .project-hero img {
+      width: 100%;
+      display: block;
+      border-radius: 14px;
+    }
+
+    .project-page h2 {
+      font-size: 2rem;
+      margin-top: 60px;
+      margin-bottom: 20px;
+    }
+
+    .project-page h3 {
+      font-size: 1.25rem;
+      margin-top: 30px;
+      margin-bottom: 12px;
+    }
+
+    .project-page p {
+      line-height: 1.8;
+    }
+
+    .project-page li {
+      margin: 10px 0;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .project-page li strong {
+      color: var(--text);
+    }
+
+    .project-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .project-meta span {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .screens {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
+    .screens figure {
+      margin: 0;
+    }
+
+    .screens img {
+      width: 100%;
+      display: block;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+    }
+
+    .screens figcaption {
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+      margin-top: 25px;
+    }
+
+    .feature-card {
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: var(--surface);
+    }
+
+    .feature-card h3 {
+      margin-top: 0;
+      font-size: 1.1rem;
+    }
+
+    .feature-card p {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 0;
+    }
+
+    .flow {
+      padding: 25px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      margin-top: 25px;
+      text-align: center;
+      line-height: 2;
+      color: var(--muted);
+    }
+
+    .flow strong {
+      color: var(--text);
+    }
+
+    .note {
+      padding: 20px;
+      border: 1px dashed var(--line);
+      border-radius: 12px;
+      margin-top: 25px;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .tech {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .tech span {
+      padding: 8px 13px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 700px) {
+      .screens,
+      .feature-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .project-page {
+        padding: 50px 0;
+      }
+    }
+  </style>
+</head>
+
 <body>
-<header class="site-header"><div class="container nav"><a class="brand" href="../index.html">JLZ<span>.</span></a><a class="button secondary" href="../index.html#projectos">← Projectos</a></div></header>
-<main class="project-page"><div class="container narrow"><p class="eyebrow">SISTEMA DE FACTURAÇÃO E GESTÃO COMERCIAL</p><h1>FaturaSimplix Business</h1><p class="lead">Sistema desktop para gestão comercial e fiscal.</p><figure class="project-hero"><img src="../assets/img/FSB-cover.jpeg" alt="FaturaSimplix Business — screenshot principal"></figure><h2>O meu trabalho</h2><ul><li>Gestão de clientes, produtos, cotações e facturas.</li><li>Pagamentos, recibos e notas de crédito/débito.</li><li>Regras de negócio e cálculos.</li><li>Geração de PDF e exportação SAFT/XML.</li><li>Dashboard, dados e backups.</li></ul><h2>Galeria do projecto</h2><div class="screens"><figure><img src="../assets/img/FSB-Fluxo-caixa.jpeg" alt="FaturaSimplix Business — ecrã 01" loading="lazy"><figcaption>FaturaSimplix Business — ecrã 01</figcaption></figure><figure><img src="../assets/img/FSB-KPIs-Dashboard.jpeg" alt="FaturaSimplix Business — ecrã 02" loading="lazy"><figcaption>FaturaSimplix Business — ecrã 02</figcaption></figure><figure><img src="../assets/img/FSB-Top-10.jpeg" alt="FaturaSimplix Business — ecrã 03" loading="lazy"><figcaption>FaturaSimplix Business — ecrã 03</figcaption></figure><figure><img src="../assets/img/FSB-caixa.jpeg" alt="FaturaSimplix Business — ecrã 04" loading="lazy"><figcaption>FaturaSimplix Business — ecrã 04</figcaption></figure><figure><img src="../assets/img/FSB-VD-pagamento.jpeg" alt="FaturaSimplix Business — ecrã 05" loading="lazy"><figcaption>FaturaSimplix Business — ecrã 05</figcaption></figure><figure><img src="../assets/img/FSB-Recibo.jpeg" alt="FaturaSimplix Business — ecrã 06" loading="lazy"><figcaption>FaturaSimplix Business — ecrã 06</figcaption></figure><figure><img src="../assets/img/FSB-Resumo.jpg" alt="FaturaSimplix Business — ecrã 07" loading="lazy"><figcaption>FaturaSimplix Business — ecrã 07</figcaption></figure><figure><img src="../assets/img/FSB-Producto.jpg" alt="FaturaSimplix Business — ecrã 08" loading="lazy"><figcaption>FaturaSimplix Business — ecrã 08</figcaption></figure><figure><img src="../assets/img/FSB-Stock.jpg" alt="FaturaSimplix Business — ecrã 09" loading="lazy"><figcaption>FaturaSimplix Business — ecrã 09</figcaption></figure></div><h2>Tecnologias</h2><div class="tech"><span>C#</span><span>.NET</span><span>WPF</span><span>SQL Server</span><span>XML/SAFT</span></div></div></main>
-<footer><div class="container"><span>© <span id="year"></span> Jaime de Leite Zandamela</span><span>Maputo, Moçambique</span></div></footer>
-<script>document.querySelector("#year").textContent=new Date().getFullYear();</script>
-</body></html>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="../index.html">
+        JLZ<span>.</span>
+      </a>
+
+      <a class="button secondary" href="../index.html#projectos">
+        ← Projectos
+      </a>
+    </div>
+  </header>
+
+  <main class="project-page">
+    <div class="container narrow">
+
+      <p class="eyebrow">
+        ERP DESKTOP · QMZ TECNOLOGIA E INOVAÇÃO, LDA
+      </p>
+
+      <h1>
+        FaturaSimplix Business
+      </h1>
+
+      <p class="lead">
+        ERP desktop para gestão comercial e financeira, com controlo
+        do ciclo de facturação, auditoria, mecanismos de integridade
+        fiscal, licenciamento e apoio à gestão empresarial.
+      </p>
+
+      <div class="project-meta">
+        <span>● Projecto empresarial</span>
+        <span>● Desenvolvimento contínuo</span>
+        <span>● .NET / WPF</span>
+        <span>● Participação no desenvolvimento e evolução</span>
+      </div>
+
+      <figure class="project-hero">
+        <img
+          src="../assets/img/FSB-cover.jpeg"
+          alt="FaturaSimplix Business — visão geral do sistema"
+        >
+      </figure>
+
+      <h2>Sobre o projecto</h2>
+
+      <p>
+        O <strong>FaturaSimplix Business</strong> é um ERP desktop de
+        gestão comercial e financeira desenvolvido no contexto da
+        <strong>QMZ Tecnologia e Inovação, LDA</strong>.
+      </p>
+
+      <p>
+        A solução foi concebida para apoiar empresas na gestão integrada
+        das suas operações comerciais, desde a elaboração de cotações
+        até à emissão de documentos fiscais, pagamentos, recibos,
+        notas de crédito, notas de débito e relatórios.
+      </p>
+
+      <p>
+        O sistema procura combinar automatização de processos,
+        controlo de operações, rastreabilidade, segurança de dados
+        e mecanismos de apoio à conformidade fiscal.
+      </p>
+
+      <h2>Fluxo comercial principal</h2>
+
+      <div class="flow">
+        <strong>Cotação / Proforma</strong>
+        <br>
+        ↓
+        <br>
+        <strong>Aprovação</strong>
+        <br>
+        ↓
+        <br>
+        <strong>Factura</strong>
+        <br>
+        ↓
+        <br>
+        <strong>Pagamento</strong>
+        <br>
+        ↓
+        <br>
+        <strong>Recibo</strong>
+        <br>
+        ↓
+        <br>
+        <strong>Notas de Crédito / Débito e Relatórios</strong>
+      </div>
+
+      <p class="note">
+        Uma regra importante do fluxo é que a emissão de uma factura
+        depende de uma cotação previamente aprovada.
+      </p>
+
+      <h2>Problemas abordados</h2>
+
+      <p>
+        O sistema foi desenvolvido para responder a desafios comuns
+        na gestão comercial e financeira, tais como:
+      </p>
+
+      <ul>
+        <li>Erros em cálculos e operações financeiras.</li>
+        <li>Falta de rastreabilidade das operações.</li>
+        <li>Dificuldade de controlo do ciclo comercial.</li>
+        <li>Risco de alterações indevidas em documentos fiscais.</li>
+        <li>Necessidade de exportação de informação fiscal.</li>
+        <li>Falta de controlo sobre utilizadores e permissões.</li>
+        <li>Necessidade de mecanismos de backup e recuperação.</li>
+      </ul>
+
+      <h2>Principais módulos e funcionalidades</h2>
+
+      <div class="feature-grid">
+
+        <div class="feature-card">
+          <h3>Gestão comercial</h3>
+          <p>
+            Gestão de empresas, clientes, produtos, serviços e operações
+            comerciais.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <h3>Cotações e facturação</h3>
+          <p>
+            Criação de cotações, aprovação, conversão em facturas,
+            controlo de saldos e estados dos documentos.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <h3>Pagamentos e recibos</h3>
+          <p>
+            Registo de pagamentos parciais ou totais e emissão
+            de recibos associados.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <h3>Notas de crédito e débito</h3>
+          <p>
+            Emissão e gestão de documentos de regularização comercial
+            e financeira.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <h3>Devoluções</h3>
+          <p>
+            Módulo destinado ao tratamento de devoluções no contexto
+            das operações comerciais.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <h3>Dashboard e indicadores</h3>
+          <p>
+            Indicadores relacionados com facturação, recebimentos,
+            dívidas, conversão e desempenho comercial.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <h3>Documentos e exportações</h3>
+          <p>
+            Geração de documentos em PDF e exportação de informação
+            fiscal no formato SAFT/XML.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <h3>Backup e recuperação</h3>
+          <p>
+            Operações de backup manual, automático e programado,
+            incluindo mecanismos de armazenamento externo.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <h3>Utilizadores e permissões</h3>
+          <p>
+            Gestão de utilizadores, roles, permissões e registos
+            de actividade no sistema.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <h3>Licenciamento</h3>
+          <p>
+            Gestão de chaves e validação de licenças através de
+            verificações locais e online.
+          </p>
+        </div>
+
+      </div>
+
+      <h2>Contribuições técnicas</h2>
+
+      <p>
+        A minha participação no FaturaSimplix Business está concentrada
+        na evolução técnica do sistema e na implementação de componentes
+        relacionados com segurança, auditoria, integridade, controlo
+        de acesso e lógica de aplicação.
+      </p>
+
+      <p>
+        Embora alguns módulos-base tenham sido inicialmente estruturados
+        por outro colaborador, contribuí de forma substancial para a
+        melhoria e expansão da solução.
+      </p>
+
+      <h3>Auditoria do sistema</h3>
+
+      <ul>
+        <li>Concepção inicial do módulo de auditoria na interface WPF.</li>
+        <li>Implementação da lógica correspondente no backend.</li>
+        <li>Integração de registos em operações críticas.</li>
+        <li>Registo de informações como utilizador, acção, data e contexto.</li>
+      </ul>
+
+      <h3>Integridade e imutabilidade fiscal</h3>
+
+      <ul>
+        <li>Implementação de mecanismos de hash para documentos fiscais.</li>
+        <li>Encadeamento de documentos através de referências de integridade.</li>
+        <li>Aplicação de mecanismos de assinatura ou hash conforme o fluxo implementado.</li>
+        <li>Melhoria dos controlos contra alterações indevidas.</li>
+      </ul>
+
+      <h3>Licenciamento e geração de chaves</h3>
+
+      <ul>
+        <li>Desenvolvimento do sistema de geração de chaves.</li>
+        <li>Validação local das licenças.</li>
+        <li>Verificação online de informações de licenciamento.</li>
+        <li>Consulta de dados de licença através de ficheiro JSON e serviço remoto.</li>
+      </ul>
+
+      <h3>ViewModels e lógica de aplicação</h3>
+
+      <ul>
+        <li>Implementação e evolução de ViewModels WPF.</li>
+        <li>Organização da lógica de apresentação e interacção.</li>
+        <li>Integração entre interface, serviços e operações de persistência.</li>
+        <li>Melhoria de fluxos de trabalho em módulos existentes.</li>
+      </ul>
+
+      <h3>Utilizadores, roles e permissões</h3>
+
+      <ul>
+        <li>Desenvolvimento de componentes de frontend e backend.</li>
+        <li>Gestão de utilizadores e perfis de acesso.</li>
+        <li>Implementação de permissões e registos de actividade.</li>
+        <li>Reforço dos mecanismos de autenticação e segurança.</li>
+      </ul>
+
+      <h3>Outras contribuições</h3>
+
+      <ul>
+        <li>Desenvolvimento completo do módulo de devoluções.</li>
+        <li>Implementação da integração de email.</li>
+        <li>Participação na melhoria de cotações, facturas, recibos, NCs e NDs.</li>
+        <li>Trabalho relacionado com backups e continuidade operacional.</li>
+        <li>Gestão de versionamento e controlo do estado da aplicação através de Git/GitHub.</li>
+        <li>Configuração inicial e associação de workstations no contexto do FaturaSimplix.com.</li>
+      </ul>
+
+      <h2>Arquitectura da aplicação</h2>
+
+      <p>
+        A aplicação segue uma abordagem de arquitectura em camadas,
+        procurando separar a interface, os serviços de aplicação,
+        os modelos de domínio e o acesso aos dados.
+      </p>
+
+      <div class="flow">
+        <strong>Presentation Layer</strong>
+        <br>
+        WPF + ViewModels
+        <br>
+        ↓
+        <br>
+        <strong>Application Layer</strong>
+        <br>
+        Services
+        <br>
+        ↓
+        <br>
+        <strong>Domain Layer</strong>
+        <br>
+        Models e regras de domínio
+        <br>
+        ↓
+        <br>
+        <strong>Data Layer</strong>
+        <br>
+        Base de dados e helpers
+      </div>
+
+      <h2>Tecnologias utilizadas</h2>
+
+      <div class="tech">
+        <span>C#</span>
+        <span>.NET</span>
+        <span>WPF</span>
+        <span>SQL Server</span>
+        <span>Git</span>
+        <span>GitHub</span>
+        <span>XML</span>
+        <span>SAFT</span>
+        <span>PDF</span>
+        <span>JSON</span>
+        <span>ViewModels</span>
+        <span>Arquitectura em camadas</span>
+      </div>
+
+      <h2>Galeria do projecto</h2>
+
+      <div class="screens">
+
+        <figure>
+          <img
+            src="../assets/img/FSB-Fluxo-caixa.jpeg"
+            alt="FaturaSimplix Business — fluxo de caixa"
+            loading="lazy"
+          >
+          <figcaption>
+            Fluxo de caixa
+          </figcaption>
+        </figure>
+
+        <figure>
+          <img
+            src="../assets/img/FSB-KPIs-Dashboard.jpeg"
+            alt="FaturaSimplix Business — dashboard de indicadores"
+            loading="lazy"
+          >
+          <figcaption>
+            Dashboard de indicadores
+          </figcaption>
+        </figure>
+
+        <figure>
+          <img
+            src="../assets/img/FSB-Top-10.jpeg"
+            alt="FaturaSimplix Business — análise Top 10"
+            loading="lazy"
+          >
+          <figcaption>
+            Indicadores e análise Top 10
+          </figcaption>
+        </figure>
+
+        <figure>
+          <img
+            src="../assets/img/FSB-caixa.jpeg"
+            alt="FaturaSimplix Business — gestão de caixa"
+            loading="lazy"
+          >
+          <figcaption>
+            Gestão de caixa
+          </figcaption>
+        </figure>
+
+        <figure>
+          <img
+            src="../assets/img/FSB-VD-pagamento.jpeg"
+            alt="FaturaSimplix Business — pagamento"
+            loading="lazy"
+          >
+          <figcaption>
+            Registo de pagamento
+          </figcaption>
+        </figure>
+
+        <figure>
+          <img
+            src="../assets/img/FSB-Recibo.jpeg"
+            alt="FaturaSimplix Business — recibo"
+            loading="lazy"
+          >
+          <figcaption>
+            Emissão de recibo
+          </figcaption>
+        </figure>
+
+        <figure>
+          <img
+            src="../assets/img/FSB-Resumo.jpg"
+            alt="FaturaSimplix Business — resumo"
+            loading="lazy"
+          >
+          <figcaption>
+            Resumo de operação
+          </figcaption>
+        </figure>
+
+        <figure>
+          <img
+            src="../assets/img/FSB-Producto.jpg"
+            alt="FaturaSimplix Business — produtos"
+            loading="lazy"
+          >
+          <figcaption>
+            Gestão de produtos
+          </figcaption>
+        </figure>
+
+        <figure>
+          <img
+            src="../assets/img/FSB-Stock.jpg"
+            alt="FaturaSimplix Business — stock"
+            loading="lazy"
+          >
+          <figcaption>
+            Gestão de stock
+          </figcaption>
+        </figure>
+
+      </div>
+
+      <h2>Estado actual</h2>
+
+      <p>
+        O FaturaSimplix Business encontra-se em desenvolvimento e
+        evolução contínua no contexto da QMZ Tecnologia e Inovação, LDA.
+        O trabalho actual inclui melhorias de arquitectura, segurança,
+        organização interna e preparação de funcionalidades e serviços
+        complementares.
+      </p>
+
+      <div class="note">
+        <strong>Nota sobre a participação:</strong>
+        A minha contribuição concentra-se na evolução técnica do sistema,
+        especialmente em auditoria, integridade fiscal, licenciamento,
+        segurança, ViewModels, utilizadores, devoluções, integração de
+        email e melhorias de componentes existentes. O projecto possui
+        contributos de mais de um desenvolvedor.
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <span>
+        © <span id="year"></span> Jaime de Leite Zandamela
+      </span>
+
+      <span>
+        Maputo, Moçambique
+      </span>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelector("#year").textContent =
+      new Date().getFullYear();
+  </script>
+
+</body>
+</html>
